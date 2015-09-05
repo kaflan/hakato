@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Slider template</title>
+    <script src="j2.js"></script>
+    <script src="unslider.min.js"></script>
+    <script>
+
+        $(function() {
+            $('.banner').unslider({
+                fluid: true,
+                dots: true,
+                speed: 500
+            });
+        });
+    </script>
+    <style>
+        .banner 
+        { 
+            position: relative;
+	        width: 100%;
+	        overflow: auto;
+	
+	        font-size: 18px;
+	        line-height: 24px;
+	        text-align: center;
+	
+	        color: rgba(255,255,255,.6);
+	        text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+	
+	        background: #5b4d3d;
+	        box-shadow: 0 1px 2px rgba(0,0,0,.25);
+        }
+        .banner ul 
+        { 
+            list-style: none;
+		    width: 300%; 
+
+        }
+        .banner ul li 
+        { 
+            display: block;
+		    float: left;
+		    width: 33%;
+		    padding: 160px 0 110px;		
+		    min-height: 350px;		
+		    box-shadow: inset 0 -3px 6px rgba(0,0,0,.1); 
+
+        }
+    </style>
+</head>
+<body>
+    <div class="banner" style="overflow: hidden; width: 100%; height: 350px">
+        <ul>
+            <li>This is a slide.</li>
+            <li>This is another slide.</li>
+            <li>This is a final slide.</li>
+        </ul>
+    </div>
+
+    <script>
+    $(function() {
+    $('.banner').unslider();
+    });
+    </script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="//stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+    <script src="//stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+
+    <script src="//unslider.com/unslider.min.js"></script>
+    <script>
+			if(window.chrome) {
+				$('.banner li').css('background-size', '100% 100%');
+			}
+
+			$('.banner').unslider({
+				fluid: true,
+				dots: true,
+				speed: 500
+			});
+
+    </script>
+
+</body>
+</html>
