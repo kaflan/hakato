@@ -1,0 +1,73 @@
+<form class="form-horizontal container">
+    <!-- email -->
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model='email'>
+        </div>
+    </div>
+    <!-- email -->
+    <!-- password -->
+    <div class="form-group">
+        <label for="inputPassword1" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword1" placeholder="Password" ng-model='password'>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword2" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword2" placeholder="Password" ng-model='passwordRepeat'>
+        </div>
+    </div>
+    <!-- /password -->
+    <!-- bio -->
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" placeholder="Name" ng-model='firstName'>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="secondName" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="secondName" placeholder="Last name" ng-model='secondName'>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="student card series" class="col-sm-2 control-label">Student card</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="secondName" placeholder="card series" ng-model='studentCardSeries'>
+        </div>
+        <label for="student card number" class="col-sm-2 control-label">Student card</label>
+        <div class="col-sm-2">
+            <input type="number" class="form-control" id="secondName" placeholder=" card number" ng-model='studentCardNumber'>
+        </div>
+    </div>
+    <!-- /bio -->
+    <div class="form-group">
+        <div class=" col-sm-offset-2 col-sm-2">
+            <label for="capture">
+                <img src="captcha.png" class="form-control" />
+            </label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id='capture' placeholder="capture" ng-model="captcha-text">
+        </div>
+        <!-- checkbox -->
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="rememberMe"> Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- /checkbox -->
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" ng-enebled="isFormValid()" ng-click="submitForm()">Registration</button>
+            </div>
+        </div>
+</form>
