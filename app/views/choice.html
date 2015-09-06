@@ -1,33 +1,48 @@
 <div class="container">
-    <select name="" id="">
-        <option disabled>Выберите транспорт</option>
-        <option disabled>bus</option>
-        <option disabled>trolebus</option>
-        <option ng-model="transport">
-            Metro
-        </option>
-    </select>
-    <select name="" id="">
-        <option disabled>Вид проездного</option>
-        <option ng-model="variant">75</option>
-        <option ng-model="variant">96</option>
-        <option ng-model="variant">150</option>
-    </select>
-    <select name="" id="">
-        <option disabled>Месяц</option>
-        <option ng-model="month">1</option>
-        <option ng-model="month">2</option>
-        <option ng-model="month">3</option>
-        <option ng-model="month">4</option>
-        <option ng-model="month">5</option>
-        <option ng-model="month">6</option>
-        <option ng-model="month">7</option>
-        <option ng-model="month">8</option>
-        <option ng-model="month">9</option>
-        <option ng-model="month">10</option>
-        <option ng-model="month">11</option>
-        <option ng-model="month">12</option>
-    </select>
-    <input type="submit" ng-disabled="isFormValid()" ng-click="$scope.submitBuy()">
+    <div id="wrapper">
+        <select name="" id="">
+            <option disabled>Выберите транспорт</option>
+            <option disabled>bus</option>
+            <option disabled>trolebus</option>
+            <option ng-model="transport">
+                Metro
+            </option>
+        </select>
+        <select name="" id="">
+            <option disabled>Вид проездного</option>
+            <option ng-model="variant">75</option>
+            <option ng-model="variant">96</option>
+            <option ng-model="variant">150</option>
+        </select>
+        <select name="" id="">
+            <option disabled>Месяц</option>
+            <option ng-model="month">1</option>
+            <option ng-model="month">2</option>
+            <option ng-model="month">3</option>
+            <option ng-model="month">4</option>
+            <option ng-model="month">5</option>
+            <option ng-model="month">6</option>
+            <option ng-model="month">7</option>
+            <option ng-model="month">8</option>
+            <option ng-model="month">9</option>
+            <option ng-model="month">10</option>
+            <option ng-model="month">11</option>
+            <option ng-model="month">12</option>
+        </select>
+        <input id="hide" type="submit" ng-disabled="isFormValid()" ng-click="$scope.submitBuy()">
+    </div>
     <h1> {{ticketOk}}</h1>
+    <div id="show">
+        <h2>Congratiolations You have a ticket</h2>
+        <img src="../images/50_main.jpg" height="250" width="380" alt="metro">
+    </div>
+    <script>
+    $(document).ready(function() {
+        $("#show").hide();
+        $("#hide").click(function() {
+            $("#wrapper").hide();
+            $("#show").show();
+        });
+    });
+    </script>
 </div>

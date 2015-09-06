@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    <link rel="stylesheet" href="styles/vendor.css">
+    <!-- <link rel="stylesheet" href="styles/vendor.css"> -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
@@ -32,6 +32,34 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="css/half-slider.css">
+    <style>
+    .carousel {
+        height: 50%;
+    }
+    
+    .item,
+    .active,
+    .carousel-inner {
+        height: 100%;
+    }
+    /* Background images are set within the HTML using inline CSS, not here */
+    
+    .fill {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    
+    footer {
+        margin: 50px 0;
+    }
+    </style>
 </head>
 
 <body ng-app="hakaton2App">
@@ -49,13 +77,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Metro-student</a>
+                <a class="navbar-brand" href="#/main">Metro-student</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                 <ul class="nav navbar-nav">
-                    <li><a href="#/reqistration">Registration</a></li>
-                    <li class="active"><a href="#/login">Login</a></li>
+                    <li><a class="active" href="#/registration">Registration</a></li>
+                    <li><a href="#/login">Login</a></li>
                     <!-- <li><a href="#/choice">Choice</a></li> -->
                 </ul>
             </div>
@@ -63,7 +91,7 @@
         </div>
     </nav>
     <div class="container">
-        <div ng-view=""></div>
+        <div class="row" ng-view="" style="margin-top:2%"></div>
     </div>
     <!-- Half Page Image Background Carousel Header -->
     <!-- Page Content -->
@@ -107,11 +135,6 @@
     <script src="scripts/services/gettiket.js"></script>
     <script src="scripts/services/registration.js"></script>
     <!-- endbuild -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
 </body>
 
 </html>

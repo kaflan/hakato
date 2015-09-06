@@ -11,7 +11,7 @@ angular.module('hakaton2App')
   .controller('LoginCtrl', function($scope, getUsers, $location) {
 
     $scope.userLogin = function() {
-      $scope.userInfo = getUsers.query($scope.login, $scope.password);
+      $scope.userInfo = getUsers.query($scope.login, $scope.studentCardSeries, $scope.studentCardNumber);
       // .then(function(data) {
       // });
       $location.path('/choice');

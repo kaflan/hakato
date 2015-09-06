@@ -11,12 +11,13 @@ angular.module('hakaton2App')
   .factory('getUsers', function() {
     // Public API here
     return {
-      query: function(name, number, callback) {
-        if (name === "" || number === "")
+      query: function(seriesNumber, seriesName, number, callback) {
+        if (seriesName === "" || number === "" || seriesNumber === "")
           return callback(null);
         else
           return callback({
-            "name": name,
+            "nameSeria": seriesName,
+            'nuberSeria': seriesNumber,
             "number": number
           });
       }
