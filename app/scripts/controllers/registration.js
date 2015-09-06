@@ -9,16 +9,6 @@
  */
 angular.module('hakaton2App')
   .controller('RegistrationCtrl', function($scope, registration, $location) {
-    // $scope.email;
-    // $scope.password;
-    // $scope.passwordRepeat;
-    // $scope.firstName;
-    // $scope.secondName;
-    // $scope.studentCardSeries;
-    // $scope.studentCardNumber;
-    // $scope.captchaText;
-    // $scope.rememberMe;
-
 
     function isFormValid() {
       if ($scope.email !== '' &&
@@ -46,10 +36,11 @@ angular.module('hakaton2App')
         rememberMe: $scope.rememberMe
       };
 
-      registration.query($scope.userBio).then(function(data) {
-        $scope.registOk = angular.copy(data);
-
-      });
+      $scope.registOk = registration.query($scope.userBio);
+      // .then(function(data) {
+      //   // $scope.registOk = angular.copy(data);
+      console.log($scope.registOk);
+      // });
       $location.path('/choice');
     };
   });
@@ -64,3 +55,12 @@ ng-model='studentCardNumber'
 ng-model="captcha-text"
 ng-model="rememberMe"
 */
+// $scope.email;
+// $scope.password;
+// $scope.passwordRepeat;
+// $scope.firstName;
+// $scope.secondName;
+// $scope.studentCardSeries;
+// $scope.studentCardNumber;
+// $scope.captchaText;
+// $scope.rememberMe;
